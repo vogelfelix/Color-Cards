@@ -1,0 +1,53 @@
+$base-color: #910f65;
+$base-size: 300px;
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin:0;
+}
+
+@mixin addtosize($pixel) {
+  width: $base-size+$pixel;
+  height: $base-size+$pixel;
+}
+
+%color-card{
+  background: $base-color;
+  width: $base-size;
+  height: $base-size;
+}
+
+.base{
+  @extend %color-card;
+  &:after{
+    content: "("+$base-color+")";
+  }
+}
+
+.dark{
+  @extend %color-card;
+  @include addtosize(-50);
+  background: darken($base-color,10%);
+}
+
+.darker{
+  @extend %color-card;
+  @include addtosize(-100);
+  background: darken($base-color,20%);
+}
+
+.light{
+  @extend %color-card;
+  @include addtosize(-50);
+  background: lighten($base-color,10%);
+}
+
+
+.lighter{
+  @extend %color-card;
+  @include addtosize(-100);
+  background: lighten($base-color,20%);
+}

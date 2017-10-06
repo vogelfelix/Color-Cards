@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; }
+
+.base, .dark, .darker, .light, .lighter {
+  background: #910f65;
+  width: 300px;
+  height: 300px; }
+
+.base:after {
+  content: "(#910f65)"; }
+
+.dark {
+  width: 250px;
+  height: 250px;
+  background: #630a45; }
+
+.darker {
+  width: 200px;
+  height: 200px;
+  background: #350525; }
+
+.light {
+  width: 250px;
+  height: 250px;
+  background: #bf1485; }
+
+.lighter {
+  width: 200px;
+  height: 200px;
+  background: #e81ea4; }
+
+/*# sourceMappingURL=style.css.map */
